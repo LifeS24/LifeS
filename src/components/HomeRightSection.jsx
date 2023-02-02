@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
     Box,
     Text,
@@ -9,15 +9,21 @@ import {
 import Button from './Button';
 import Homme from '../assets/homme.png'
 import Femme from '../assets/femme.png'
+import { Context } from '../context/Context';
 import LifeSLogo from '../assets/logoLifeS.png';
 import HealthMonitoring from '../assets/healthM.png'
 
 export default function HomeRightSection() {
+    const { changeVisibility, changeVisibility2 } = useContext(Context)
+    const tryLifes = () => {
+        changeVisibility(false);
+        changeVisibility2(false);
+    }
+
     return (
         <Flex
             w="50%"
-            h="100vh"
-            pt="30px"
+            pt="8vh"
             direction="column"
             justify="space-between"
         >
@@ -31,6 +37,8 @@ export default function HomeRightSection() {
                     <Button
                         color="#085FCE"
                         border="2px solid #085FCE"
+                        onClick={() => tryLifes()}
+                    //_hover={{ bg: "#085FCE", color: "#fff", }}
                     >
                         Try it now
                     </Button>
@@ -38,6 +46,7 @@ export default function HomeRightSection() {
                         bg="#0B49A0"
                         color="#fff"
                         border="2px solid #0B49A0"
+                        _hover={{ bg: "#fff", color: "#0B49A0", }}
                     >
                         Contacts
                     </Button>
@@ -64,6 +73,8 @@ export default function HomeRightSection() {
                     bg="#0B49A0"
                     color="#fff"
                     border="2px solid #0B49A0"
+                    onClick={() => tryLifes()}
+                    _hover={{ bg: "#fff", color: "#0B49A0", }}
                 >
                     Try it now
                 </Button>
@@ -73,14 +84,12 @@ export default function HomeRightSection() {
                     <Image
                         w="100%"
                         ml="-10px"
-                        zIndex="1"
                         src={Femme}
 
                     />
                     <Image
                         w="100%"
                         ml="-90px"
-                        zIndex="2"
                         src={Homme}
                     />
                 </Flex>

@@ -10,6 +10,7 @@ import { LifeSLogoIcon } from '../icons/Icon';
 export default function Footer() {
     return (
         <Flex
+            zIndex="1"
             bg="#131D37"
             color="#ffffff"
             fontFamily="Normal"
@@ -38,7 +39,7 @@ export default function Footer() {
                     mt="20px"
                     ml="30px"
                     mb="20px"
-                    fontSize="13px"
+                    fontSize="11px"
                 >
                     LifeS © 2023 Privacy Policy Terms of Use
                 </Text>
@@ -103,7 +104,7 @@ export default function Footer() {
                 pt="27px"
                 direction="column"
             >
-                <Heading as='h5' size='md'  pb="5px">
+                <Heading as='h5' size='md' pb="5px">
                     Stay in touch
                 </Heading>
                 <Text

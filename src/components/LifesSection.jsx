@@ -23,7 +23,7 @@ export default function LifesSection(props) {
             {...rest}
             w="50%"
             p="35px"
-            h="90vh"
+            h="85vh"
             spacing="20px"
             color="#ffffff"
             bgImage={BgImage}
@@ -66,13 +66,14 @@ export default function LifesSection(props) {
                 align="flex-end"
                 justify="space-between"
             >
-                <Image src={QrCode} boxSize='172.5px' />
+                <Image src={QrCode} boxSize='200px' />
                 <Flex
                     direction="column"
+                    justify="space-between"
                 >
-                    <Icon as={InstagramIcon} boxSize='24px' />
-                    <Icon as={FacebookIcon} boxSize='24px' />
-                    <Icon as={TwitterIcon} boxSize='24px' />
+                    <Icon as={InstagramIcon} boxSize='48px' p="10px" />
+                    <Icon as={FacebookIcon} boxSize='48px' p="10px" />
+                    <Icon as={TwitterIcon} boxSize='48px' p="10px" />
                 </Flex>
             </Flex>
         </Flex>

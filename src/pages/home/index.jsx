@@ -8,6 +8,7 @@ import HomeRightSection from '../../components/HomeRightSection';
 export default function Home() {
     return (
         <Flex
+            pl="5%"
             w="100%"
             m="auto"
             align="center"
